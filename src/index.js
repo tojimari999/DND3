@@ -65,14 +65,14 @@ function render() {
     const addBtn = document.createElement('button');
     addBtn.className = 'add-card-btn';
     addBtn.textContent = 'Add another card';
-    addBtn.addEventListener('click', () => showAddForm(col.id, addBtn, list));
+    addBtn.addEventListener('click', () => showAddForm(col.id, addBtn));
     colEl.appendChild(addBtn);
 
     app.appendChild(colEl);
   });
 }
 
-function showAddForm(colId, btn, list) {
+function showAddForm(colId, btn) {
   btn.style.display = 'none';
   const form = document.createElement('div');
   form.className = 'add-card-form';
